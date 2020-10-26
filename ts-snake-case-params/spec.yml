@@ -1,0 +1,23 @@
+openapi: 3.0.1
+info:
+  title: ts-snake-case-params
+  description: ts-snake-case-params
+  version: '0.0.1'
+servers:
+  - url: https://example.com
+    description: Staging
+
+paths:
+  /test:
+    get:
+      summary: summary
+      description: description
+      operationId: testGet
+      parameters:
+        - name: page_num
+          in: query
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
